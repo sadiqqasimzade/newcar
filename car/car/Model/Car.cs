@@ -7,12 +7,12 @@ namespace car.Model
 {
     internal class Car:Vehicle
     {
-        public string Brand;
-        public string Model;
-        public double FuelFor1Km;
-        public double FuelCapacity;
-        public double CurrentFuel;
-
+        public string Brand;                  //ozum arasdirdim private yazmaq lazimdi ki deyisenlere ancaq konstruktorda qiymet vere bilek ancaq kecmemisik =(
+        public string Model;                  //
+        public double FuelFor1Km;             //
+        public double FuelCapacity;           //
+        public double CurrentFuel;            //
+                                              
 
 
         public Car(string Brand,string Model, double FuelFor1Km, double FuelCapacity,int year):base(year)
@@ -61,7 +61,7 @@ Corlor:      {color}"
         {
             double result=CalculateForDrive(PathLength);
 
-            if (result > 0) Console.WriteLine($"After {PathLength}km {Model} will be with {result}L of fuel");
+            if (result >= 0) Console.WriteLine($"After {PathLength}km {Model} will be with {result}L of fuel");
             else Console.WriteLine($"{Model}:Need {-result}L more fuel");
         }
         public double CalculateForDrive(double PathLength)
